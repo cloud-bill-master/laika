@@ -1,4 +1,10 @@
 <?php
+/**
+ * Framework: Laika
+ * Author: Showket Ahmed
+ * Website: https://cloudbillmaster.com
+ * Version: 1.0.0
+ */
 
 namespace CBM\app;
 
