@@ -1,0 +1,18 @@
+{
+    "name": "cloud-bill-master/laika",
+    "description": "Web Hosting, Servers, Service & Office Management System",
+    "type": "project",
+    "license": "GPL-3.0",
+    "autoload": {
+        "psr-4": {
+            "CBM\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Showket Ahmed"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
