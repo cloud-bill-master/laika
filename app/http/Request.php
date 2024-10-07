@@ -1,13 +1,16 @@
 <?php
 /**
- * Framework: Laika
+ * APP: Laika
  * Author: Showket Ahmed
- * Website: https://cloudbillmaster.com
+ * APP Link: https://cloudbillmaster.com
+ * Email: riyadtayf@gmail.com
  * Version: 1.0.0
+ * Provider: Cloud Bill Master Ltd.
  */
 namespace CBM\app\http;
 
-defined('ROOTPATH') || http_response_code(401). die('Access Denied');
+// Direct Access Denied
+defined('ROOTPATH') || http_response_code(403). die('403 Forbidden Access!');
 
 class Request
 {
@@ -29,6 +32,24 @@ class Request
     public function isGet():bool
     {
         return $this->method === 'get';
+    }
+
+    // Request Get Value
+    public function get(string $key):string
+    {
+        if($this->isGet()){
+            return ($this->data()[$key] ?? '');
+        }
+        return '';
+    }
+
+    // Request Get Value
+    public function post(string $key):string
+    {
+        if($this->isPost()){
+            return ($this->data()[$key] ?? '');
+        }
+        return '';
     }
 
     // Get Request Data

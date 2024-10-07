@@ -1,19 +1,36 @@
 <?php
 /**
- * Framework: Laika
+ * APP: Laika
  * Author: Showket Ahmed
- * Website: https://cloudbillmaster.com
+ * APP Link: https://cloudbillmaster.com
+ * Email: riyadtayf@gmail.com
  * Version: 1.0.0
+ * Provider: Cloud Bill Master Ltd.
  */
+
+// Direct Access Denied
+defined('ROOTPATH') || http_response_code(403). die('403 Forbidden Access!');
+
+// Database Driver
+define('DB_DRIVER', 'mysql');
+
+// Database Host
+define('DB_HOST', 'localhost');
+
+// Database connection Port
+define('DB_PORT', 3306);
 
 // Database User
 define('DB_USER', 'root');
 
 // Database Password
-define('DB_PASS', '');
+define('DB_PASSWORD', '');
 
-// Database User
+// Database Table
 define('DB_TABLE', 'laika');
 
-// Database User
+// Database Table Prefix
 define('TABLE_PREFIX', 'lk_');
+
+// Limit
+define('LIMIT', 20);

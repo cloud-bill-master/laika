@@ -1,31 +1,45 @@
 <?php
 /**
- * Framework: Laika
+ * APP: Laika
  * Author: Showket Ahmed
- * Website: https://cloudbillmaster.com
+ * APP Link: https://cloudbillmaster.com
+ * Email: riyadtayf@gmail.com
  * Version: 1.0.0
+ * Provider: Cloud Bill Master Ltd.
  */
 
 namespace CBM\app;
 
-use CBM\app\http\Request;
-use CBM\app\http\Header;
-use CBM\app\http\Uri;
+// Direct Access Denied
+defined('ROOTPATH') || http_response_code(403). die('403 Forbidden Access!');
+
+// use CBM\app\http\Request;
+// use CBM\app\http\Header;
+// use CBM\app\http\Uri;
 
 class App
 {
     // Request
-    public Request $request;
+    public http\Request $request;
+
+    // Response
+    public http\Response $response;
+
     // Uri
-    public Uri $uri;
+    public http\Uri $uri;
+
     // Header
-    public Header $header;
+    public http\Header $header;
+
+    // Constants
+    public Cons $cons;
 
     public function __construct()
     {
-        $this->request    = new Request;
-        $this->uri        = new Uri;
-        $this->header     = new Header;
+        $this->request  = new http\Request;
+        $this->uri      = new http\Uri;
+        $this->header   = new http\Header;
+        $this->cons     = new Cons;
     }
 
     public static function load()

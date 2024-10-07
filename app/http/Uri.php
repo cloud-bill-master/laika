@@ -1,13 +1,16 @@
 <?php
 /**
- * Framework: Laika
+ * APP: Laika
  * Author: Showket Ahmed
- * Website: https://cloudbillmaster.com
+ * APP Link: https://cloudbillmaster.com
+ * Email: riyadtayf@gmail.com
  * Version: 1.0.0
+ * Provider: Cloud Bill Master Ltd.
  */
 namespace CBM\app\http;
 
-defined('ROOTPATH') || http_response_code(401). die('Access Denied');
+// Direct Access Denied
+defined('ROOTPATH') || http_response_code(403). die('403 Forbidden Access!');
 
 class Uri
 {
